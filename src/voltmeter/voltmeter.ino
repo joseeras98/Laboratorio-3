@@ -87,11 +87,11 @@ void loop() {
     } else {
       digitalWrite(4, LOW);
     }
-    Serial.print(String(v0, 2) + "Vac,");
+    Serial.print(String(v0, 2) + "AC,");
     display.setCursor(0, 0);
     display.print("V1: ");
     display.print(String(v0, 2));
-    display.print(" Vac");
+    display.print(" AC");
   } else {
     d0 = 1, s = 0;
     TIMSK1 &= ~(1 << OCIE1A);
@@ -102,11 +102,11 @@ void loop() {
     } else {
       digitalWrite(4, LOW);
     }
-    Serial.print(String(v0, 2) + "Vdc,");
+    Serial.print(String(v0, 2) + "DC,");
     display.setCursor(0, 0);
     display.print("V1: ");
     display.print(String(v0, 2));
-    display.print(" Vdc");
+    display.print(" DC");
   }
   if (m1) {
     TCNT1 = 0;
@@ -127,11 +127,11 @@ void loop() {
     } else {
       digitalWrite(5, LOW);
     }
-    Serial.print(String(v1, 2) + "Vac,");
+    Serial.print(String(v1, 2) + "AC,");
     display.setCursor(0, 12);
     display.print("V2: ");
     display.print(String(v1, 2));
-    display.print(" Vac");
+    display.print(" AC");
   } else {
     d1 = 1, s = 0;
     TIMSK1 &= ~(1 << OCIE1A);
@@ -142,11 +142,11 @@ void loop() {
     } else {
       digitalWrite(5, LOW);
     }
-    Serial.print(String(v1, 2) + "Vdc,");
+    Serial.print(String(v1, 2) + "DC,");
     display.setCursor(0, 12);
     display.print("V2: ");
     display.print(String(v1, 2));
-    display.print(" Vdc");
+    display.print(" DC");
   }
   if (m2) {
     TCNT1 = 0;
@@ -167,11 +167,11 @@ void loop() {
     } else {
       digitalWrite(6, LOW);
     }
-    Serial.print(String(v2, 2) + "Vac,");
+    Serial.print(String(v2, 2) + "AC,");
     display.setCursor(0, 24);
     display.print("V3: ");
     display.print(String(v2, 2));
-    display.print(" Vac");
+    display.print(" AC");
   } else {
     d2 = 1, s = 0;
     TIMSK1 &= ~(1 << OCIE1A);
@@ -182,11 +182,11 @@ void loop() {
     } else {
       digitalWrite(6, LOW);
     }
-    Serial.print(String(v2, 2) + "Vdc,");
+    Serial.print(String(v2, 2) + "DC,");
     display.setCursor(0, 24);
     display.print("V3: ");
     display.print(String(v2, 2));
-    display.print(" Vdc");
+    display.print(" DC");
   }
   if (m3) {
     TCNT1 = 0;
@@ -207,11 +207,11 @@ void loop() {
     } else {
       digitalWrite(7, LOW);
     }
-    Serial.println(String(v3, 2) + "Vac");
+    Serial.println(String(v3, 2) + "AC");
     display.setCursor(0, 36);
     display.print("V4: ");
     display.print(String(v3, 2));
-    display.print(" Vac");
+    display.print(" AC");
   } else {
     d3 = 1, s = 0;
     TIMSK1 &= ~(1 << OCIE1A);
@@ -222,11 +222,11 @@ void loop() {
     } else {
       digitalWrite(7, LOW);
     }
-    Serial.println(String(v3, 2) + "Vdc");
+    Serial.println(String(v3, 2) + "DC");
     display.setCursor(0, 36);
     display.print("V4: ");
     display.print(String(v3, 2));
-    display.print(" Vdc");
+    display.print(" DC");
   }
   display.display();
 }
